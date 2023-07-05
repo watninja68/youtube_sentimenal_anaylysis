@@ -5,9 +5,73 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* https://cdn.dribbble.com/users/43669/screenshots/12297579/media/57a8cf260185f2ca6b1747afc5cf4259.jpg?compress=1&resize=1000x750&vertical=top */
+  background-image: url("https://cdn.dribbble.com/users/43669/screenshots/12297579/media/57a8cf260185f2ca6b1747afc5cf4259.jpg?compress=1&resize=1000x750&vertical=top ");
+  background-repeat: no-repeat;
+  
+ 
+  background-size: cover;
+  opacity: 1;
+
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+header{
+  background-color: black;
+  margin: auto;
+  padding: 8px 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1{
+  color: white;
+  font-family: "McLaren",cursive;
+  font-weight: 200 ;
+}
+.fieldText{
+  color: rgb(255, 255, 255);
+  margin-left: 38% ;
+  margin-top: 15%;
+  font-size: 50px;
+  text-shadow: 0 0 25px #000000, 0 0 20px #08026e;
+  
+}
+.text{
+  text-align: center;
+  margin-left: 22% ;
+  margin-top: 0.1%;
+  height: 35px;
+  border-radius: 100px;
+  width: 900px;
+  text-shadow: 0 0 25px #000000, 0 0 20px #08026e;
+}
+
+.btn {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ff0000;
+  text-decoration: none;
+}
+
+
