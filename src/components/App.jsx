@@ -343,28 +343,21 @@ export default App;
 */
 
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Header from "./Header";
 import PacmanLoader from "react-spinners/PacmanLoader";
-import VideoAnalyzer from './VideoAnalyzer';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ResultPage from './ResultPage';
+
 
 function App() {
 
- <VideoAnalyzer />
-
-//  return (
-//   <Router>
-//     <Switch>
-//       <Route exact path="/" component={VideoAnalyzer} />
-//       <Route path="/result" component={ResultPage} />
-//     </Switch>
-//   </Router>
-// );
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
+  const [displayText, setDisplayText] = useState('');
+
+ 
+
+  
 
   function getData(val) {
     setData(val.target.value);
@@ -373,12 +366,19 @@ function App() {
 
   function handleSubmit() {
     setLoading(true);
+    setDisplayText('');
     setTimeout(() => {
+      setDisplayText('The Video rating is 4.05');
       setLoading(false);
-    }, 30000);
+    
+    }, 5000);
   }
 
+ 
+
   return (
+
+    
     <div>
       <div>
         <Header />
@@ -391,6 +391,45 @@ function App() {
         <button className="btn" onClick={handleSubmit}>
           Submit
         </button>
+
+
+  
+
+
+        
+        <h1
+          className="displayText"
+          style={{
+            fontSize: "37px",
+            color: "white",
+            marginTop: "20px",
+            padding: "10px",
+            textAlign: "center",
+            fontStyle: "bold",
+            // textShadow: "0 0 25px #000000, 0 0 20px #08026e",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+            backgroundColor: "black",
+           
+
+          
+           
+          }}
+        >
+          {displayText}
+        </h1>
+
+{/* 
+        {
+          displayText
+         
+        }
+
+ */}
+
+
+     
+
+        
       </div>
 
       {loading && (
@@ -412,7 +451,14 @@ function App() {
               border: "4px solid black",
             }}
           />
+          
+          
+
         </div>
+
+    
+
+        
       )}
     </div>
   );
