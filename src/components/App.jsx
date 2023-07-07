@@ -347,10 +347,21 @@ import React, { useState } from "react";
 import Header from "./Header";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import VideoAnalyzer from './VideoAnalyzer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ResultPage from './ResultPage';
 
 function App() {
 
  <VideoAnalyzer />
+
+//  return (
+//   <Router>
+//     <Switch>
+//       <Route exact path="/" component={VideoAnalyzer} />
+//       <Route path="/result" component={ResultPage} />
+//     </Switch>
+//   </Router>
+// );
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
